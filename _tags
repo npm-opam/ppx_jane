@@ -1,0 +1,83 @@
+<**/*.ml{,i}>: warn(-40), no_alias_deps
+<**/*>: thread
+# This prevents the implicit addition of -ppx options by ocamlfind
+<**/*>: predicate(custom_ppx)
+<bin/*>: predicate(ppx_driver)
+# OASIS_START
+# DO NOT EDIT (digest: 76969a54ab9eacaa324655c1d2b07a94)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+true: annot, bin_annot
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Library ppx_jane
+"src/ppx_jane.cmxs": use_ppx_jane
+<src/*.ml{,i,y}>: package(ppx_assert)
+<src/*.ml{,i,y}>: package(ppx_bench)
+<src/*.ml{,i,y}>: package(ppx_bin_prot)
+<src/*.ml{,i,y}>: package(ppx_compare)
+<src/*.ml{,i,y}>: package(ppx_custom_printf)
+<src/*.ml{,i,y}>: package(ppx_enumerate)
+<src/*.ml{,i,y}>: package(ppx_expect)
+<src/*.ml{,i,y}>: package(ppx_fail)
+<src/*.ml{,i,y}>: package(ppx_fields_conv)
+<src/*.ml{,i,y}>: package(ppx_here)
+<src/*.ml{,i,y}>: package(ppx_inline_test)
+<src/*.ml{,i,y}>: package(ppx_let)
+<src/*.ml{,i,y}>: package(ppx_pipebang)
+<src/*.ml{,i,y}>: package(ppx_sexp_conv)
+<src/*.ml{,i,y}>: package(ppx_sexp_message)
+<src/*.ml{,i,y}>: package(ppx_sexp_value)
+<src/*.ml{,i,y}>: package(ppx_typerep_conv)
+<src/*.ml{,i,y}>: package(ppx_variants_conv)
+# Executable ppx-jane
+<bin/main.{native,byte}>: package(ppx_assert)
+<bin/main.{native,byte}>: package(ppx_bench)
+<bin/main.{native,byte}>: package(ppx_bin_prot)
+<bin/main.{native,byte}>: package(ppx_compare)
+<bin/main.{native,byte}>: package(ppx_custom_printf)
+<bin/main.{native,byte}>: package(ppx_driver)
+<bin/main.{native,byte}>: package(ppx_enumerate)
+<bin/main.{native,byte}>: package(ppx_expect)
+<bin/main.{native,byte}>: package(ppx_fail)
+<bin/main.{native,byte}>: package(ppx_fields_conv)
+<bin/main.{native,byte}>: package(ppx_here)
+<bin/main.{native,byte}>: package(ppx_inline_test)
+<bin/main.{native,byte}>: package(ppx_let)
+<bin/main.{native,byte}>: package(ppx_pipebang)
+<bin/main.{native,byte}>: package(ppx_sexp_conv)
+<bin/main.{native,byte}>: package(ppx_sexp_message)
+<bin/main.{native,byte}>: package(ppx_sexp_value)
+<bin/main.{native,byte}>: package(ppx_typerep_conv)
+<bin/main.{native,byte}>: package(ppx_variants_conv)
+<bin/main.{native,byte}>: use_ppx_jane
+<bin/*.ml{,i,y}>: package(ppx_assert)
+<bin/*.ml{,i,y}>: package(ppx_bench)
+<bin/*.ml{,i,y}>: package(ppx_bin_prot)
+<bin/*.ml{,i,y}>: package(ppx_compare)
+<bin/*.ml{,i,y}>: package(ppx_custom_printf)
+<bin/*.ml{,i,y}>: package(ppx_driver)
+<bin/*.ml{,i,y}>: package(ppx_enumerate)
+<bin/*.ml{,i,y}>: package(ppx_expect)
+<bin/*.ml{,i,y}>: package(ppx_fail)
+<bin/*.ml{,i,y}>: package(ppx_fields_conv)
+<bin/*.ml{,i,y}>: package(ppx_here)
+<bin/*.ml{,i,y}>: package(ppx_inline_test)
+<bin/*.ml{,i,y}>: package(ppx_let)
+<bin/*.ml{,i,y}>: package(ppx_pipebang)
+<bin/*.ml{,i,y}>: package(ppx_sexp_conv)
+<bin/*.ml{,i,y}>: package(ppx_sexp_message)
+<bin/*.ml{,i,y}>: package(ppx_sexp_value)
+<bin/*.ml{,i,y}>: package(ppx_typerep_conv)
+<bin/*.ml{,i,y}>: package(ppx_variants_conv)
+<bin/*.ml{,i,y}>: use_ppx_jane
+# OASIS_STOP
